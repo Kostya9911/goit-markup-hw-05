@@ -24,6 +24,8 @@ ul {
   --srcond-bcg-cl: #f5f4fa;
   --col-bcg-11: #188ce8;
   --col-grad-12: rgba(47, 48, 58, 0.4);
+  --col-bcg-13: rgba(33, 150, 243, 0.9);
+  --col-ov-14: rgba(0, 0, 0, 0.2);
 
   /* Колір іконок */
   --col-icon-11: #afb1b8;
@@ -31,6 +33,7 @@ ul {
   /* Інше */
   --col-bd-11: #ececec;
   --col-bd-12: #eee;
+  --col-bd-13: rgba(0, 0, 0, 0.1);
 }
 
 /* Глобальні стилі */
@@ -533,7 +536,7 @@ img {
   border-top: none;
 }
 
-.list-portfolio {
+.list-projects {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -30px;
@@ -562,5 +565,77 @@ img {
 .item-advantage {
   width: 270px;
 }
+.thumb-project {
+  position: relative;
+  overflow: hidden;
+}
 
-/* ----------------------------------------- */
+.overlay-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--col-bcg-13);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 63px 24px;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+
+  transform: translateY(100%);
+}
+
+.overlay-disc {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ligt-cl-txt);
+}
+
+.link-project:hover .overlay-project,
+.link-project:focus .overlay-project {
+  transform: translateY(0);
+}
+
+/* Модальне вікно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--col-ov-14);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 521px;
+  background-color: var(--ligt-cl-txt);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--col-bd-13);
+  background-color: #ffffff;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}

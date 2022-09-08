@@ -54,7 +54,7 @@
       <div class="overlay">
         <div class="container main-container">
           <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button-main" type="button">Замовити послугу</button>
+          <button class="button-main" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </div>
     </section>
@@ -403,6 +403,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- Модальне вікно -->
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn" type="button" data-modal-close>
+        <svg width="18px" height="18px">
+          <use href="./img/icon.svg#close-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
