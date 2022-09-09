@@ -138,10 +138,6 @@ img {
   color: var(--link-cl-txt);
 }
 
-.list-nav li {
-  overflow: hidden;
-}
-
 .list-nav a::after {
   position: absolute;
 
