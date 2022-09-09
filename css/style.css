@@ -37,6 +37,7 @@ ul {
 
   /* Анімації */
   --cubic-biz-1: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-anime: 250ms;
 }
 
 /* Глобальні стилі */
@@ -119,7 +120,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
-  transition: color 250ms var(--cubic-biz-1);
+  transition: color var(--time-anime) var(--cubic-biz-1);
 }
 
 .item-nav a {
@@ -156,14 +157,13 @@ img {
   /* transform: translateX(-100%); */
 
   opacity: 0;
-  transition: opacity 250ms var(--cubic-biz-1);
+  transition: opacity var(--time-anime) var(--cubic-biz-1);
 }
 
 .list-nav a:hover::after,
 .list-nav a:focus::after,
 .link.current::after {
   opacity: 1;
-  /* transform: translateX(0); */
 }
 
 .container.container-header {
@@ -248,7 +248,7 @@ img {
   width: 216px;
   height: 50px;
 
-  transition: background-color 250ms var(--cubic-biz-1);
+  transition: background-color var(--time-anime) var(--cubic-biz-1);
 }
 
 .button-main:hover,
@@ -266,10 +266,6 @@ img {
     url(../img/img-bcg-hero.jpg);
 }
 
-/* Помилково зроблений, но крутий ефект Ховеру */
-/* .overlay:hover {
-  background-image: url(../img/img-bcg-hero.jpg);
-} */
 /* Секція - Перелік переваг Студії */
 
 /* Приховує заголовоки по всьому сайту */
@@ -412,7 +408,8 @@ img {
   justify-content: center;
   color: var(--col-icon-11);
   fill: currentColor;
-  transition: color 250ms var(--cubic-biz-1), background-color 250ms var(--cubic-biz-1);
+  transition: color var(--time-anime) var(--cubic-biz-1),
+    background-color var(--time-anime) var(--cubic-biz-1);
 }
 
 /* Ховер та фокус - Іконкі соцмереж - Команда та Футер */
@@ -444,7 +441,8 @@ img {
   justify-content: center;
   align-items: center;
   fill: currentColor;
-  transition: border 250ms var(--cubic-biz-1), color 250ms var(--cubic-biz-1);
+  transition: border var(--time-anime) var(--cubic-biz-1),
+    color var(--time-anime) var(--cubic-biz-1);
 }
 
 .link-client:hover,
@@ -467,7 +465,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  transition: color 250ms var(--cubic-biz-1);
+  transition: color var(--time-anime) var(--cubic-biz-1);
 }
 .link-map {
   color: var(--ligt-cl-txt);
@@ -540,8 +538,8 @@ img {
   border-radius: 4px;
   padding: 6px 22px;
 
-  transition: background-color 250ms var(--cubic-biz-1), box-shadow 250ms var(--cubic-biz-1),
-    color 250ms var(--cubic-biz-1);
+  transition: background-color var(--time-anime) var(--cubic-biz-1),
+    box-shadow var(--time-anime) var(--cubic-biz-1), color var(--time-anime) var(--cubic-biz-1);
 }
 
 .button-portfolio:hover,
@@ -581,7 +579,7 @@ img {
   display: inline-block;
   text-decoration: none;
 
-  transition: box-shadow 250ms var(--cubic-biz-1);
+  transition: box-shadow var(--time-anime) var(--cubic-biz-1);
 }
 
 .description-project {
@@ -640,7 +638,7 @@ img {
   justify-content: center;
 
   transform: translateY(100%);
-  transition: transform 250ms var(--cubic-biz-1);
+  transition: transform var(--time-anime) var(--cubic-biz-1);
 }
 
 .overlay-disc {
@@ -665,7 +663,8 @@ img {
   background-color: var(--col-ov-14);
   opacity: 1;
 
-  transition: opacity 250ms var(--cubic-biz-1), visibility 250ms var(--cubic-biz-1);
+  transition: opacity var(--time-anime) var(--cubic-biz-1),
+    visibility var(--time-anime) var(--cubic-biz-1);
 }
 
 .backdrop.is-hidden {
@@ -692,7 +691,7 @@ img {
 
   transform: scale(1) translate(-50%, -50%);
 
-  transition: transform 250ms var(--cubic-biz-1);
+  transition: transform var(--time-anime) var(--cubic-biz-1);
 }
 
 .modal-btn {
